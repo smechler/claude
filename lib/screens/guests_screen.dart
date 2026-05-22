@@ -71,7 +71,7 @@ class _GuestCard extends StatelessWidget {
         color: AppColors.card,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
-          color: expired || !guest.isActive ? AppColors.border.withOpacity(0.3) : AppColors.border,
+          color: expired || !guest.isActive ? AppColors.border.withValues(alpha: 0.3) : AppColors.border,
           width: 0.5,
         ),
       ),
@@ -84,11 +84,11 @@ class _GuestCard extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 22,
-                  backgroundColor: AppColors.secondary.withOpacity(guest.isActive && !expired ? 0.2 : 0.08),
+                  backgroundColor: AppColors.secondary.withValues(alpha: guest.isActive && !expired ? 0.2 : 0.08),
                   child: Text(
                     guest.name.isNotEmpty ? guest.name[0].toUpperCase() : '?',
                     style: TextStyle(
-                      color: AppColors.secondary.withOpacity(guest.isActive && !expired ? 1.0 : 0.35),
+                      color: AppColors.secondary.withValues(alpha: guest.isActive && !expired ? 1.0 : 0.35),
                       fontWeight: FontWeight.w700,
                       fontSize: 18,
                     ),
@@ -171,7 +171,7 @@ class _GuestCard extends StatelessWidget {
     }
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4),
-      decoration: BoxDecoration(color: color.withOpacity(0.15), borderRadius: BorderRadius.circular(20)),
+      decoration: BoxDecoration(color: color.withValues(alpha: 0.15), borderRadius: BorderRadius.circular(20)),
       child: Text(label, style: TextStyle(color: color, fontSize: 11, fontWeight: FontWeight.w700)),
     );
   }
@@ -260,7 +260,7 @@ class _AddGuestSheetState extends State<_AddGuestSheet> {
                   margin: const EdgeInsets.only(bottom: 8),
                   padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
                   decoration: BoxDecoration(
-                    color: sel ? AppColors.primary.withOpacity(0.1) : AppColors.card,
+                    color: sel ? AppColors.primary.withValues(alpha: 0.1) : AppColors.card,
                     borderRadius: BorderRadius.circular(12),
                     border: Border.all(color: sel ? AppColors.primary : AppColors.border, width: sel ? 1.5 : 0.5),
                   ),

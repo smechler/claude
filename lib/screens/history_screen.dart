@@ -77,7 +77,7 @@ class _LogItem extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: (isGuest ? AppColors.secondary : AppColors.primary).withOpacity(0.15),
+                  color: (isGuest ? AppColors.secondary : AppColors.primary).withValues(alpha: 0.15),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Icon(
@@ -104,7 +104,7 @@ class _LogItem extends StatelessWidget {
                   const SizedBox(height: 4),
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
-                    decoration: BoxDecoration(color: AppColors.success.withOpacity(0.15), borderRadius: BorderRadius.circular(20)),
+                    decoration: BoxDecoration(color: AppColors.success.withValues(alpha: 0.15), borderRadius: BorderRadius.circular(20)),
                     child: const Text('Opened', style: TextStyle(color: AppColors.success, fontSize: 10, fontWeight: FontWeight.w600)),
                   ),
                 ],

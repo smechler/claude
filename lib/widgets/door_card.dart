@@ -72,14 +72,14 @@ class _DoorCardState extends State<DoorCard> with SingleTickerProviderStateMixin
           borderRadius: BorderRadius.circular(20),
           border: Border.all(
             color: _state == _OpenState.success
-                ? AppColors.success.withOpacity(0.5)
+                ? AppColors.success.withValues(alpha: 0.5)
                 : _state == _OpenState.opening
-                    ? AppColors.primary.withOpacity(0.4)
+                    ? AppColors.primary.withValues(alpha: 0.4)
                     : AppColors.border,
             width: _state != _OpenState.idle ? 1.5 : 0.5,
           ),
           boxShadow: _state == _OpenState.success
-              ? [BoxShadow(color: AppColors.success.withOpacity(0.12), blurRadius: 20, spreadRadius: 2)]
+              ? [BoxShadow(color: AppColors.success.withValues(alpha: 0.12), blurRadius: 20, spreadRadius: 2)]
               : null,
         ),
         child: Padding(
@@ -92,7 +92,7 @@ class _DoorCardState extends State<DoorCard> with SingleTickerProviderStateMixin
                   Container(
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      color: _typeColor(widget.door.type).withOpacity(0.15),
+                      color: _typeColor(widget.door.type).withValues(alpha: 0.15),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Icon(_typeIcon(widget.door.type), color: _typeColor(widget.door.type), size: 22),
@@ -134,7 +134,7 @@ class _DoorCardState extends State<DoorCard> with SingleTickerProviderStateMixin
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
       decoration: BoxDecoration(
-        color: (online ? AppColors.success : AppColors.danger).withOpacity(0.15),
+        color: (online ? AppColors.success : AppColors.danger).withValues(alpha: 0.15),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Row(

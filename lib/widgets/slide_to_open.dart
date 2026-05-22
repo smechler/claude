@@ -103,8 +103,8 @@ class _SlideToOpenState extends State<SlideToOpen> with SingleTickerProviderStat
                     width: _padding + _thumbSize + (maxDrag * progress),
                     decoration: BoxDecoration(
                       color: widget.isSuccess
-                          ? AppColors.success.withOpacity(0.2)
-                          : AppColors.primary.withOpacity(0.12),
+                          ? AppColors.success.withValues(alpha: 0.2)
+                          : AppColors.primary.withValues(alpha: 0.12),
                       borderRadius: BorderRadius.circular(13),
                     ),
                   ),
@@ -143,7 +143,7 @@ class _SlideToOpenState extends State<SlideToOpen> with SingleTickerProviderStat
                         borderRadius: BorderRadius.circular(11),
                         boxShadow: [
                           BoxShadow(
-                            color: (widget.isSuccess ? AppColors.success : AppColors.primary).withOpacity(0.35),
+                            color: (widget.isSuccess ? AppColors.success : AppColors.primary).withValues(alpha: 0.35),
                             blurRadius: 10,
                             offset: const Offset(0, 3),
                           ),

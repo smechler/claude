@@ -143,7 +143,7 @@ class SettingsScreen extends StatelessWidget {
   Widget _iconBox(IconData icon, Color color, {Color? bg}) => Container(
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
-          color: bg ?? color.withOpacity(0.12),
+          color: bg ?? color.withValues(alpha: 0.12),
           borderRadius: BorderRadius.circular(10),
         ),
         child: Icon(icon, size: 20, color: color),

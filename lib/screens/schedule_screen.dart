@@ -71,7 +71,7 @@ class _ScheduleCard extends StatelessWidget {
         color: AppColors.card,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
-          color: schedule.isActive ? AppColors.border : AppColors.border.withOpacity(0.3),
+          color: schedule.isActive ? AppColors.border : AppColors.border.withValues(alpha: 0.3),
           width: 0.5,
         ),
       ),
@@ -85,10 +85,10 @@ class _ScheduleCard extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: AppColors.warning.withOpacity(schedule.isActive ? 0.15 : 0.07),
+                    color: AppColors.warning.withValues(alpha: schedule.isActive ? 0.15 : 0.07),
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: Icon(Icons.schedule_rounded, color: AppColors.warning.withOpacity(schedule.isActive ? 1.0 : 0.35), size: 20),
+                  child: Icon(Icons.schedule_rounded, color: AppColors.warning.withValues(alpha: schedule.isActive ? 1.0 : 0.35), size: 20),
                 ),
                 const SizedBox(width: 12),
                 Expanded(
